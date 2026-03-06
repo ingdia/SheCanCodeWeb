@@ -60,7 +60,7 @@ function Header() {
               </div>
             )}
           </div>
-          <Link href="/community" className="text-neutral-600 hover:text-[#009BCF] transition font-medium">
+          <Link href="/careers" className="text-neutral-600 hover:text-[#009BCF] transition font-medium">
             Career
           </Link>
           <Link href="/blog" className="text-neutral-600 hover:text-[#009BCF] transition font-medium">
@@ -138,7 +138,7 @@ function Header() {
               About Us
             </Link>
             <Link
-              href="/community"
+              href="/careers"
               className="text-neutral-600 hover:text-[#009BCF] transition font-medium py-2"
               onClick={() => setIsMenuOpen(false)}
             >
