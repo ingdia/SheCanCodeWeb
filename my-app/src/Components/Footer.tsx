@@ -16,11 +16,11 @@ function Footer() {
   return (
     <footer className="relative bg-gray-50 border-t border-gray-200 pt-20 pb-10 overflow-hidden">
 
-      {/* 🌐 Tech Glow Background */}
+      {/*  Tech Glow Background */}
       <div className="absolute -top-32 -left-32 w-[420px] h-[420px] bg-[#009BCF]/20 blur-[120px] rounded-full"></div>
       <div className="absolute -bottom-32 -right-32 w-[420px] h-[420px] bg-cyan-400/20 blur-[120px] rounded-full"></div>
 
-      {/* 🌐 Tech Grid Pattern */}
+      {/*  Tech Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div className="w-full h-full bg-[linear-gradient(to_right,#009BCF_1px,transparent_1px),linear-gradient(to_bottom,#009BCF_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
