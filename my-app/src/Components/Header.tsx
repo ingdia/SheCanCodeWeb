@@ -8,6 +8,7 @@ import Image from "next/image";
 function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
   const handleApplyClick = () => {
     router.push("/apply");
@@ -37,9 +38,28 @@ function Header() {
           <Link href="/Courses" className="text-neutral-600 hover:text-[#009BCF] transition font-medium">
             Courses
           </Link>
-          <Link href="/About" className="text-neutral-600 hover:text-[#009BCF] transition font-medium">
-            About Us
-          </Link>
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsAboutDropdownOpen(true)}
+            onMouseLeave={() => setIsAboutDropdownOpen(false)}
+          >
+            <button className="text-neutral-600 hover:text-[#009BCF] transition font-medium flex items-center gap-1">
+              About Us
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {isAboutDropdownOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                <Link href="/About/who-we-are" className="block px-4 py-2 text-neutral-600 hover:bg-[#009BCF]/10 hover:text-[#009BCF] transition">
+                  Who We Are
+                </Link>
+                <Link href="/About/what-we-do" className="block px-4 py-2 text-neutral-600 hover:bg-[#009BCF]/10 hover:text-[#009BCF] transition">
+                  What We Do
+                </Link>
+              </div>
+            )}
+          </div>
           <Link href="/community" className="text-neutral-600 hover:text-[#009BCF] transition font-medium">
             Career
           </Link>
