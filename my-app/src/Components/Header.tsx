@@ -45,7 +45,7 @@ function Header() {
           </Link>
         </nav>
 
-        {/* CTA Button with Programmatic Navigation */}
+        {/* CTA Button  */}
         <div className="hidden md:flex items-center gap-4">
           <button 
             onClick={handleApplyClick}
