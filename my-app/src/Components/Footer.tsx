@@ -14,7 +14,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="relative bg-gray-50 border-t border-gray-200 pt-20 pb-10 overflow-hidden">
+    <footer className="relative bg-sky-50 border-t border-gray-200 pt-20 pb-10 overflow-hidden">
 
       {/*  Tech Glow Background */}
       <div className="absolute -top-32 -left-32 w-[420px] h-[420px] bg-[#009BCF]/20 blur-[120px] rounded-full"></div>
