@@ -97,7 +97,7 @@ export default function PartnersNewsletter() {
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
             
             {/* Sliding Container */}
-            <div className="flex animate-slide">
+            <div className="flex animate-[slide_30s_linear_infinite] hover:animate-[slide_30s_linear_infinite_paused] w-max">
               {allPartners.map((partner, index) => (
                 <div
                   key={index}
@@ -111,7 +111,7 @@ export default function PartnersNewsletter() {
         </div>
 
         {/* Newsletter Section */}
-        <div className="bg-cyan-600   text-white rounded-2xl p-6 md:p-12">
+        <div className="bg-cyan-600 text-white rounded-2xl p-6 md:p-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             {/* Text Content */}
             <div className="flex-1">
@@ -145,25 +145,6 @@ export default function PartnersNewsletter() {
           </div>
         </div>
       </div>
-
-      {/* CSS for sliding animation */}
-      <style jsx>{`
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.333%);
-          }
-        }
-        .animate-slide {
-          animation: slide 30s linear infinite;
-          width: max-content;
-        }
-        .animate-slide:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 }

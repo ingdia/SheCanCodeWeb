@@ -64,6 +64,15 @@ body {
   animation: fadeInUp 1s ease-out;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
 .clip-diagonal-right {
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
 }
